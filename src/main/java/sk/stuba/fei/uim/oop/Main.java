@@ -1,29 +1,21 @@
 package sk.stuba.fei.uim.oop;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
-        SvetoveStrany strana = SvetoveStrany.SEVER;
+        JFrame okno = new JFrame();
+        okno.setVisible(true);
+        okno.setSize(300,300);
+        okno.setResizable(false);
+        okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //toto treba na zadani urcite!
+        okno.setLayout(new GridLayout(3,4));
+        JLabel label = new JLabel("Hello world");
+        okno.add(label);
 
-        System.out.println(SvetoveStrany.fromString("sever"));
-        for(SvetoveStrany s :SvetoveStrany.values()){
-            checkSever(s);
+        for (int i=0;i<10;i++){
+            okno.add(new JLabel("Hello "+i));
         }
-        switch (strana){
-            case SEVER:System.out.println("sever");
-            break ;
-            default:System.out.println("neni sever");
-            break;
     }
-    }
-
-     public static void checkSever(SvetoveStrany s){
-         if (s.isJeSever()){
-             System.out.println("sever");
-         }
-         else{
-             System.out.println("neni sever");
-         }
-     }
-
-    }
-
+}
