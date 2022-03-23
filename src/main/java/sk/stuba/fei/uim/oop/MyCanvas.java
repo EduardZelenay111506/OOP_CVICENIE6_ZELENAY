@@ -14,7 +14,7 @@ public class MyCanvas extends Canvas {
         }
 
     }
-    public void vlastnyPaint(Graphics g){
+    private void vlastnyPaint(Graphics g){
         g.setColor(Color.GREEN);
         g.fillRect(100, 100,100,100);
         g.setColor(Color.RED);

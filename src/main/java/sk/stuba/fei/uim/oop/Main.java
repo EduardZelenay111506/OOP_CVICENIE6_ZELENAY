@@ -11,6 +11,6 @@ public class Main {
         okno.setResizable(true);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //toto treba na zadani urcite!
 
-        okno.add(new MyCanvas());
+        okno.add(new MyPanel());
     }
 }
